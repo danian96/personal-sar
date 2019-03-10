@@ -1,0 +1,19 @@
+!!!
+%html{:lang => "en"}
+  %head
+    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+    %meta{:charset => "utf-8"}/
+    %meta{:content => "IE=edge", "http-equiv" => "X-UA-Compatible"}/
+    %meta{:content => "width=device-width, initial-scale=1", :name => "viewport"}/
+    %meta{:content => "Ingreso Sistema de Control de Personal - SAR BOLIVIA", :name => "description"}/
+    %meta{:content => "danianmercado@gmail.com", :name => "author"}/
+    = csrf_meta_tags
+    = csp_meta_tag
+    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
+    = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
+  %body.fix-header.fix-sidebar.card-no-border.logo-center
+    = render 'layouts/preloader'
+    %section#wrapper.login-register.login-sidebar{:style => "background-image:url(#{image_url 'background/login-register.jpg'});"}
+      .login-box.card
+        .card-body
+          = yield

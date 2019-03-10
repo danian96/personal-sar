@@ -1,0 +1,23 @@
+.row
+  .col-lg-12
+    .card.card-outline-inverse
+      .card-header
+        %h4.m-b-0.text-white Listado de Tipos de Asignaciones
+      .card-body
+        %h4.card-title Exportar Datos
+        %h6.card-subtitle Exportar datos a Clipboard , CSV, Excel, PDF e Imprimir
+        .table-responsive.m-t-40
+          %table#example23.display.nowrap.table.table-hover.table-striped.table-bordered{:cellspacing => "0", :width => "100%"}
+            %thead
+              %tr
+                %th Nombre Tipo de Asignacion
+                %th{:colspan => "1"} Acciones
+            %tbody
+              - @type_of_assignments.each do |type_of_assignment|
+                %tr
+                  %td= type_of_assignment.name
+                  %td
+                    = render "shared/action_column_table", :object_path => edit_type_of_assignment_path(type_of_assignment), :object =>type_of_assignment
+        %br/
+        = link_to 'Registrar Nuevo Tipo de Asignacion', new_type_of_assignment_path, class: "btn btn-block btn-inverse"
+= render "shared/table_helper"

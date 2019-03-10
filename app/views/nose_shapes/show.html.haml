@@ -1,0 +1,16 @@
+.card.card-outline-inverse
+  .card-header
+    %h4.m-b-0.text-white Forma de Nariz
+  .card-body
+    .form-body
+      %h3.box-title
+        Datos de la Forma de Nariz :
+      %hr.m-t-0.m-b-40/
+      .col-md-12
+        .form-group.row
+          %strong.control-label.text-right.col-md-3.col-sm-12 Nombre:
+          .col-md-9.col-sm-12
+            = @nose_shape.name
+      .col-md-12.text-right
+        = link_to 'Editar', edit_nose_shape_path(@nose_shape), class:"btn btn-inverse"
+        = link_to 'Atrás', nose_shapes_path , class:"btn btn-inverse"

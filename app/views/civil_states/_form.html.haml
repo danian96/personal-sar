@@ -1,0 +1,9 @@
+= form_with(model: civil_state, local: true , html: {class: "form-horizontal"}) do |form|
+  = render "shared/error_messages", :object => civil_state
+  .col-md-12
+    .form-group.row
+      .col-md-3.text-right
+        %label.col-form-label{:for => :name} Nombre
+      .col-md-9
+        = form.text_field :name ,class:"form-control"
+  = render "shared/form-actions", :object_path => civil_states_path, :form =>form

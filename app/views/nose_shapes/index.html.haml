@@ -1,0 +1,23 @@
+.row
+  .col-lg-12
+    .card.card-outline-inverse
+      .card-header
+        %h4.m-b-0.text-white Listado de Formas de Nariz
+      .card-body
+        %h4.card-title Exportar Datos
+        %h6.card-subtitle Exportar datos a Clipboard , CSV, Excel, PDF e Imprimir
+        .table-responsive.m-t-40
+          %table#example23.display.nowrap.table.table-hover.table-striped.table-bordered{:cellspacing => "0", :width => "100%"}
+            %thead
+              %tr
+                %th Nombre Forma de Nariz
+                %th{:colspan => "1"} Acciones
+            %tbody
+              - @nose_shapes.each do |nose_shape|
+                %tr
+                  %td= nose_shape.name
+                  %td
+                    = render "shared/action_column_table", :object_path => edit_nose_shape_path(nose_shape), :object =>nose_shape
+        %br/
+        = link_to 'Registrar Nueva Forma de Nariz', new_nose_shape_path, class: "btn btn-block btn-inverse"
+= render "shared/table_helper"

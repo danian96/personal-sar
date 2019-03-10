@@ -1,0 +1,8 @@
+= link_to '<i class="fa fa-eye" style="color:black"></i>'.html_safe, object
+= link_to '<i class="fa fa-edit" style="color:black"></i>'.html_safe, object_path
+= link_to '<i class="fa fa-trash" style="color:black"></i>'.html_safe, object, method: :delete, data: {confirm: 'Esta acción no podrá deshacerse.',
+                                                                                                    title: '¿Estás seguro?',
+                                                                                                    commit: 'Si, Continuar',
+                                                                                                    cancel: 'No, Cancelar',
+                                                                                                    'commit-class': 'btn-dark',
+                                                                                                    'cancel-class': 'btn-secondary'}

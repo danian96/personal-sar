@@ -1,0 +1,16 @@
+.card.card-outline-inverse
+  .card-header
+    %h4.m-b-0.text-white Tipo de Asignacion
+  .card-body
+    .form-body
+      %h3.box-title
+        Datos del Tipo de Asignacion :
+      %hr.m-t-0.m-b-40/
+      .col-md-12
+        .form-group.row
+          %strong.control-label.text-right.col-md-3.col-sm-12 Nombre:
+          .col-md-9.col-sm-12
+            = @type_of_assignment.name
+      .col-md-12.text-right
+        = link_to 'Editar', edit_type_of_assignment_path(@type_of_assignment), class:"btn btn-inverse"
+        = link_to 'Atrás', type_of_assignments_path , class:"btn btn-inverse"

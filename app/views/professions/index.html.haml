@@ -1,0 +1,23 @@
+.row
+  .col-lg-12
+    .card.card-outline-inverse
+      .card-header
+        %h4.m-b-0.text-white Listado de Profesiones
+      .card-body
+        %h4.card-title Exportar Datos
+        %h6.card-subtitle Exportar datos a Clipboard , CSV, Excel, PDF e Imprimir
+        .table-responsive.m-t-40
+          %table#example23.display.nowrap.table.table-hover.table-striped.table-bordered{:cellspacing => "0", :width => "100%"}
+            %thead
+              %tr
+                %th Nombre de Profesion
+                %th{:colspan => "1"} Acciones
+            %tbody
+              - @professions.each do |profession|
+                %tr
+                  %td= profession.name
+                  %td
+                    = render "shared/action_column_table", :object_path => edit_profession_path(profession), :object =>profession
+        %br/
+        = link_to 'Registrar Nueva Profesiones', new_profession_path, class: "btn btn-block btn-inverse"
+= render "shared/table_helper"

@@ -1,0 +1,69 @@
+%aside.left-sidebar
+  .scroll-sidebar
+    %nav.sidebar-nav
+      %ul#sidebarnav
+        %li.nav-small-cap PERSONAL
+        %li
+          %a.has-arrow.waves-effect.waves-dark{"aria-expanded" => "false", :href => "#"}
+            %i.mdi.mdi-calendar-multiple
+            %span.hide-menu Configuracion
+          %ul.collapse{"aria-expanded" => "false"}
+            %li
+              %a.has-arrow.waves-effect.waves-dark{"aria-expanded" => "false", :href => "#"}
+                %i.mdi.mdi-calendar-multiple
+                %span.hide-menu Detalles Personales
+              %ul.collapse{"aria-expanded" => "false"}
+                %li
+                  = link_to civil_states_path do
+                    %i.mdi.mdi-calendar-text
+                    Estado Civil
+                %li
+                  = link_to professions_path do
+                    %i.mdi.mdi-calendar-text
+                    Profesion
+                %li
+                  = link_to study_grades_path do
+                    %i.mdi.mdi-calendar-plus
+                    Grado de Estudio
+                %li
+                  = link_to '#' do
+                    %i.mdi.mdi-calendar-plus
+                    Tipo de Licencia de Conduccion
+            %li
+              %a.has-arrow.waves-effect.waves-dark{"aria-expanded" => "false", :href => "#"}
+                %i.mdi.mdi-calendar-multiple
+                %span.hide-menu Caracteristicas Fisicas
+              %ul.collapse{"aria-expanded" => "false"}
+                %li
+                  = link_to blood_types_path do
+                    %i.mdi.mdi-calendar-text
+                    Tipo de Sangre
+                %li
+                  = link_to eye_colors_path do
+                    %i.mdi.mdi-calendar-plus
+                    Color de Ojos
+                %li
+                  = link_to mouth_shapes_path do
+                    %i.mdi.mdi-calendar-text
+                    Forma de la Boca
+                %li
+                  = link_to nose_shapes_path do
+                    %i.mdi.mdi-calendar-plus
+                    Forma de la Nariz
+                %li
+                  = link_to skin_colors_path do
+                    %i.mdi.mdi-calendar-plus
+                    Color de Piel
+            %li
+              %a.has-arrow.waves-effect.waves-dark{"aria-expanded" => "false", :href => "#"}
+                %i.mdi.mdi-calendar-multiple
+                %span.hide-menu Roles y Asistencias
+              %ul.collapse{"aria-expanded" => "false"}
+                %li
+                  = link_to type_of_assistances_path do
+                    %i.mdi.mdi-calendar-text
+                    Tipo de Asistencia
+                %li
+                  = link_to type_of_assignments_path do
+                    %i.mdi.mdi-calendar-plus
+                    Tipo de Asignacion

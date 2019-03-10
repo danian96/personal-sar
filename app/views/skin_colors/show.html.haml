@@ -1,0 +1,16 @@
+.card.card-outline-inverse
+  .card-header
+    %h4.m-b-0.text-white Color de Piel
+  .card-body
+    .form-body
+      %h3.box-title
+        Datos del Color de Piel :
+      %hr.m-t-0.m-b-40/
+      .col-md-12
+        .form-group.row
+          %strong.control-label.text-right.col-md-3.col-sm-12 Nombre:
+          .col-md-9.col-sm-12
+            = @skin_color.name
+      .col-md-12.text-right
+        = link_to 'Editar', edit_skin_color_path(@skin_color), class:"btn btn-inverse"
+        = link_to 'Atrás', skin_colors_path , class:"btn btn-inverse"

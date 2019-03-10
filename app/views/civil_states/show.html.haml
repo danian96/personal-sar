@@ -1,0 +1,16 @@
+.card.card-outline-inverse
+  .card-header
+    %h4.m-b-0.text-white Estado Civil
+  .card-body
+    .form-body
+      %h3.box-title
+        Datos del Estado Civil :
+      %hr.m-t-0.m-b-40/
+      .col-md-12
+        .form-group.row
+          %strong.control-label.text-right.col-md-3.col-sm-12 Nombre:
+          .col-md-9.col-sm-12
+            = @civil_state.name
+      .col-md-12.text-right
+        = link_to 'Editar', edit_civil_state_path(@civil_state), class:"btn btn-inverse"
+        = link_to 'Atrás', civil_states_path , class:"btn btn-inverse"

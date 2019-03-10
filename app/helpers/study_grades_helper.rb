@@ -1,0 +1,2 @@
+module StudyGradesHelper
+end
